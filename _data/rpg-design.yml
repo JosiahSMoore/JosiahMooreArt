@@ -1,0 +1,6 @@
+# Add one entry per piece. 'image' is the path under /images/, 'alt' is a short
+# description for accessibility/SEO (not shown on the page).
+# Order here = order shown on the site (top of list = first/top-left).
+
+# - image: /images/rpg-design/example-piece.jpg
+#   alt: 'Description of the piece'

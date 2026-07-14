@@ -1,0 +1,168 @@
+diff --git a/_data/illustration.yml b/_data/illustration.yml
+new file mode 100644
+index 0000000..ec321ff
+--- /dev/null
++++ b/_data/illustration.yml
+@@ -0,0 +1,40 @@
++# Add one entry per piece. 'image' is the path under /images/, 'alt' is a short
++# description for accessibility/SEO (not shown on the page).
++# Order here = order shown on the site (top of list = first/top-left).
++
++- image: /images/illustration/bird1.jpg
++  alt: 'Bird illustration, engraving style'
++- image: /images/illustration/bird2.jpg
++  alt: 'Bird illustration, engraving style'
++- image: /images/illustration/bird3.jpg
++  alt: 'Bird illustration, engraving style'
++- image: /images/illustration/bird4.jpg
++  alt: 'Bird illustration, engraving style'
++- image: /images/illustration/caravan.jpg
++  alt: 'Caravan illustration'
++- image: /images/illustration/char-design-1.jpg
++  alt: 'Character design piece 1'
++- image: /images/illustration/char-design-2.jpg
++  alt: 'Character design piece 2'
++- image: /images/illustration/char-design-3.jpg
++  alt: 'Character design piece 3'
++- image: /images/illustration/fish-chess.jpg
++  alt: 'Fish chess illustration'
++- image: /images/illustration/horse-rider.jpg
++  alt: 'Horse rider illustration'
++- image: /images/illustration/mouse1.jpg
++  alt: 'Mouse illustration 1'
++- image: /images/illustration/mouse2.jpg
++  alt: 'Mouse illustration 2'
++- image: /images/illustration/mouse3.jpg
++  alt: 'Mouse illustration 3'
++- image: /images/illustration/mouse4.jpg
++  alt: 'Mouse illustration 4'
++- image: /images/illustration/mouse5.jpg
++  alt: 'Mouse illustration 5'
++- image: /images/illustration/parade.jpg
++  alt: 'Parade illustration'
++- image: /images/illustration/rabbit-mail.jpg
++  alt: 'Rabbit mail illustration'
++- image: /images/illustration/storybook.jpg
++  alt: 'Storybook illustration'
+diff --git a/_data/rpg-design.yml b/_data/rpg-design.yml
+new file mode 100644
+index 0000000..bb9b222
+--- /dev/null
++++ b/_data/rpg-design.yml
+@@ -0,0 +1,6 @@
++# Add one entry per piece. 'image' is the path under /images/, 'alt' is a short
++# description for accessibility/SEO (not shown on the page).
++# Order here = order shown on the site (top of list = first/top-left).
++
++# - image: /images/rpg-design/example-piece.jpg
++#   alt: 'Description of the piece'
+diff --git a/_includes/header.html b/_includes/header.html
+index b75239f..e052f16 100644
+--- a/_includes/header.html
++++ b/_includes/header.html
+@@ -33,16 +33,6 @@
+ 			</div>
+ 		</div>
+ 
+-		<div class="projects-menu">
+-			<ul class="menu__list">
+-				{% for project in site.projects reversed %}
+-				<li class="menu__list__item">
+-					<a href="{{ project.url | relative_url }}" class="menu__list__item__link">{{ project.title }}</a>
+-				</li>
+-				{% endfor %}
+-			</ul>
+-		</div>
+-
+ 		<div class="header__lower">
+ 
+ 			{% include socials.html %}
+diff --git a/index.html b/index.html
+index c91b601..7316dc7 100644
+--- a/index.html
++++ b/index.html
+@@ -5,34 +5,8 @@ description: Illustration portfolio of Josiah Moore, a Denver-based fantasy arti
+ featured_image: /images/social.jpg
+ ---
+ 
+-<section class="portfolio">
+-
+-	<div class="content-wrap portfolio-wrap">
+-
+-		{% assign illustration_projects = site.projects | where: "category", "illustration" %}
+-		{% for project in illustration_projects reversed %}
+-
+-		<div class="portfolio-item">
+-
+-			<a class="portfolio-item__link" href="{{ project.url | relative_url }}">
+-
+-				<div class="portfolio-item__image">
+-					<img src="{{ project.featured_image | relative_url }}" alt="{{ project.title }}">
+-				</div>
+-
+-				<div class="portfolio-item__content">
+-					<div class="portfolio-item__info">
+-						<h2 class="portfolio-item__title">{{ project.title }}</h2>
+-						<p class="portfolio-item__subtitle">{{ project.subtitle }}</p>
+-					</div>
+-				</div>
+-
+-			</a>
+-
+-		</div>
+-
+-		{% endfor %}
+-
+-	</div>
+-
+-</section>
+\ No newline at end of file
++<div class="gallery" data-columns="2">
++	{% for piece in site.data.illustration %}
++	<img src="{{ piece.image | relative_url }}" alt="{{ piece.alt }}">
++	{% endfor %}
++</div>
+diff --git a/rpg-design/index.html b/rpg-design/index.html
+index 83061a9..398d237 100644
+--- a/rpg-design/index.html
++++ b/rpg-design/index.html
+@@ -5,34 +5,8 @@ description: Tabletop RPG design work by Josiah Moore, based in Denver.
+ featured_image: /images/social.jpg
+ ---
+ 
+-<section class="portfolio">
+-
+-	<div class="content-wrap portfolio-wrap">
+-
+-		{% assign rpg_projects = site.projects | where: "category", "rpg-design" %}
+-		{% for project in rpg_projects reversed %}
+-
+-		<div class="portfolio-item">
+-
+-			<a class="portfolio-item__link" href="{{ project.url | relative_url }}">
+-
+-				<div class="portfolio-item__image">
+-					<img src="{{ project.featured_image | relative_url }}" alt="{{ project.title }}">
+-				</div>
+-
+-				<div class="portfolio-item__content">
+-					<div class="portfolio-item__info">
+-						<h2 class="portfolio-item__title">{{ project.title }}</h2>
+-						<p class="portfolio-item__subtitle">{{ project.subtitle }}</p>
+-					</div>
+-				</div>
+-
+-			</a>
+-
+-		</div>
+-
+-		{% endfor %}
+-
+-	</div>
+-
+-</section>
++<div class="gallery" data-columns="2">
++	{% for piece in site.data["rpg-design"] %}
++	<img src="{{ piece.image | relative_url }}" alt="{{ piece.alt }}">
++	{% endfor %}
++</div>

@@ -1,0 +1,40 @@
+# Add one entry per piece. 'image' is the path under /images/, 'alt' is a short
+# description for accessibility/SEO (not shown on the page).
+# Order here = order shown on the site (top of list = first/top-left).
+
+- image: /images/illustration/parade.jpg
+  alt: 'Parade illustration'
+- image: /images/illustration/fish-chess.jpg
+  alt: 'Fish chess illustration'
+- image: /images/illustration/rabbit-mail.jpg
+  alt: 'Rabbit mail illustration'
+- image: /images/illustration/horse-rider.jpg
+  alt: 'Horse rider illustration'
+- image: /images/illustration/storybook.jpg
+  alt: 'Storybook illustration'
+- image: /images/illustration/caravan.jpg
+  alt: 'Caravan illustration'
+- image: /images/illustration/mouse1.jpg
+  alt: 'Mouse illustration 1'
+- image: /images/illustration/mouse2.jpg
+  alt: 'Mouse illustration 2'
+- image: /images/illustration/mouse3.jpg
+  alt: 'Mouse illustration 3'
+- image: /images/illustration/mouse4.jpg
+  alt: 'Mouse illustration 4'
+- image: /images/illustration/mouse5.jpg
+  alt: 'Mouse illustration 5'
+- image: /images/illustration/bird1.jpg
+  alt: 'Bird illustration, engraving style'
+- image: /images/illustration/bird2.jpg
+  alt: 'Bird illustration, engraving style'
+- image: /images/illustration/bird3.jpg
+  alt: 'Bird illustration, engraving style'
+- image: /images/illustration/bird4.jpg
+  alt: 'Bird illustration, engraving style'
+- image: /images/illustration/char-design-1.jpg
+  alt: 'Character design piece 1'
+- image: /images/illustration/char-design-2.jpg
+  alt: 'Character design piece 2'
+- image: /images/illustration/char-design-3.jpg
+  alt: 'Character design piece 3'
