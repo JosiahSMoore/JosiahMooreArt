@@ -1,7 +1,7 @@
 site: Index Jekyll Theme
 
-url: https://josiahsmoore.github.io
-baseurl: /JosiahMooreArt
+url: https://josiahmooreart.com
+baseurl: ""
 
 collections:
   pages:

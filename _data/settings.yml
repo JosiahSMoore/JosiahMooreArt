@@ -1,6 +1,6 @@
 basic_settings:
-  site_title: Index
-  site_tagline: A minimal, fixed sidebar grid portfolio Jekyll theme.
+  site_title: Josiah Moore Art
+  site_tagline: Illustrator & RPG Designer in Denver
   favicon_image: /images/favicon.png
 
 header_settings:
@@ -9,14 +9,14 @@ header_settings:
 
 menu_settings:
   menu_items:
-    - title: 'Projects'
+    - title: 'Illustration'
       url: '/'
-    - title: 'Blog'
-      url: '/blog/'
-    - title: 'About'
-      url: '/about'
+    - title: 'RPG Design'
+      url: '/rpg-design/'
     - title: 'Contact'
       url: '/contact'
+    - title: 'Shop'
+      url: 'https://josiahmoore.bigcartel.com/'
 
 grid_settings:
   overlay_opacity: 0.8
@@ -30,8 +30,9 @@ contact_settings:
 
 social_settings:
   facebook_url: ''
-  twitter_url: ''
-  instagram_url: ''
+  twitter_url: 'https://x.com/JosiahSMoore'
+  instagram_url: 'https://www.instagram.com/josiahsmoore'
+  linktree_url: 'https://linktr.ee/josiahsmoore'
   snapchat_url: ''
   youtube_url: ''
   google-plus_url: ''
