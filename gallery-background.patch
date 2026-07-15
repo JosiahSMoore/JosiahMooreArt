@@ -1,0 +1,13 @@
+diff --git a/_sass/_includes/_portfolio.scss b/_sass/_includes/_portfolio.scss
+index f43a43f..c7da665 100644
+--- a/_sass/_includes/_portfolio.scss
++++ b/_sass/_includes/_portfolio.scss
+@@ -7,6 +7,8 @@
+ .portfolio {
+ 	margin-top: 0;
+ 	padding: $grid-spacing/2;
++	background: $background-alt-color;
++	min-height: 100vh;
+ }
+ 
+ .portfolio-wrap {

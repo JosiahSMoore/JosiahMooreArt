@@ -7,6 +7,8 @@
 .portfolio {
 	margin-top: 0;
 	padding: $grid-spacing/2;
+	background: $background-alt-color;
+	min-height: 100vh;
 }
 
 .portfolio-wrap {

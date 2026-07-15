@@ -5,8 +5,12 @@ description: Tabletop RPG design work by Josiah Moore, based in Denver.
 featured_image: /images/social.jpg
 ---
 
-<div class="gallery" data-columns="2">
-	{% for piece in site.data["rpg-design"] %}
-	<img src="{{ piece.image | relative_url }}" alt="{{ piece.alt }}">
-	{% endfor %}
+<div class="gallery-page">
+
+	<div class="gallery" data-columns="2">
+		{% for piece in site.data["rpg-design"] %}
+		<img src="{{ piece.image | relative_url }}" alt="{{ piece.alt }}">
+		{% endfor %}
+	</div>
+
 </div>

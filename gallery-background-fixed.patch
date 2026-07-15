@@ -1,0 +1,70 @@
+diff --git a/_sass/_includes/_gallery.scss b/_sass/_includes/_gallery.scss
+index 691b343..9fd8645 100644
+--- a/_sass/_includes/_gallery.scss
++++ b/_sass/_includes/_gallery.scss
+@@ -4,6 +4,12 @@
+ 
+ // - - - - - - - - - - - - - - - - - -
+ 
++.gallery-page {
++	background: $background-alt-color;
++	min-height: 100vh;
++	padding: $grid-spacing/2;
++}
++
+ .gallery {
+ 	visibility: hidden;
+ 	position: relative;
+diff --git a/index.html b/index.html
+index 93e13f3..3728d0a 100644
+--- a/index.html
++++ b/index.html
+@@ -5,14 +5,18 @@ description: Illustration portfolio of Josiah Moore, a Denver-based fantasy arti
+ featured_image: /images/social.jpg
+ ---
+ 
+-<div class="gallery" data-columns="2">
+-	{% for piece in site.data.illustration %}
+-	<img src="{{ piece.image | relative_url }}" alt="{{ piece.alt }}">
+-	{% endfor %}
+-</div>
++<div class="gallery-page">
++
++	<div class="gallery" data-columns="2">
++		{% for piece in site.data.illustration %}
++		<img src="{{ piece.image | relative_url }}" alt="{{ piece.alt }}">
++		{% endfor %}
++	</div>
++
++	<div class="gallery" data-columns="1">
++		{% for piece in site.data.illustration_carousel %}
++		<img src="{{ piece.image | relative_url }}" alt="{{ piece.alt }}">
++		{% endfor %}
++	</div>
+ 
+-<div class="gallery" data-columns="1">
+-	{% for piece in site.data.illustration_carousel %}
+-	<img src="{{ piece.image | relative_url }}" alt="{{ piece.alt }}">
+-	{% endfor %}
+ </div>
+diff --git a/rpg-design/index.html b/rpg-design/index.html
+index 398d237..7c6d59f 100644
+--- a/rpg-design/index.html
++++ b/rpg-design/index.html
+@@ -5,8 +5,12 @@ description: Tabletop RPG design work by Josiah Moore, based in Denver.
+ featured_image: /images/social.jpg
+ ---
+ 
+-<div class="gallery" data-columns="2">
+-	{% for piece in site.data["rpg-design"] %}
+-	<img src="{{ piece.image | relative_url }}" alt="{{ piece.alt }}">
+-	{% endfor %}
++<div class="gallery-page">
++
++	<div class="gallery" data-columns="2">
++		{% for piece in site.data["rpg-design"] %}
++		<img src="{{ piece.image | relative_url }}" alt="{{ piece.alt }}">
++		{% endfor %}
++	</div>
++
+ </div>

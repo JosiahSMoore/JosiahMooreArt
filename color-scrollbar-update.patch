@@ -1,0 +1,58 @@
+diff --git a/_data/settings.yml b/_data/settings.yml
+index f7012cd..51aab3a 100644
+--- a/_data/settings.yml
++++ b/_data/settings.yml
+@@ -63,9 +63,9 @@ color_settings:
+   text_dark_color: '#2A2F36'
+   text_medium_color: '#6C7A89'
+   text_light_color: '#ABB7B7'
+-  accent_color: '#0C5DF2'
++  accent_color: '#2F8898'
+   border_color: '#dddddd'
+-  overlay_background_color: '#0C5DF2'
++  overlay_background_color: '#2F8898'
+   overlay_text_color: '#ffffff'
+   overlay_accent_color: '#2A2F36'
+   error_color: '#D64541'
+diff --git a/_sass/_includes/_header.scss b/_sass/_includes/_header.scss
+index dc80902..1639f6e 100644
+--- a/_sass/_includes/_header.scss
++++ b/_sass/_includes/_header.scss
+@@ -23,6 +23,21 @@
+ 		bottom: 0;
+ 		width: 30%;
+ 		padding: 0;
++		scrollbar-width: thin;
++		scrollbar-color: rgba($accent-color, 0.4) transparent;
++
++		&::-webkit-scrollbar {
++			width: 6px;
++		}
++
++		&::-webkit-scrollbar-track {
++			background: transparent;
++		}
++
++		&::-webkit-scrollbar-thumb {
++			background-color: rgba($accent-color, 0.4);
++			border-radius: 3px;
++		}
+ 	}
+ }
+ 
+diff --git a/_sass/_reset.scss b/_sass/_reset.scss
+index b110082..6b6d6e8 100644
+--- a/_sass/_reset.scss
++++ b/_sass/_reset.scss
+@@ -12,9 +12,9 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,hr,a,
+ article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+ 
+-html { font-size: 100%; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
++html { font-size: 100%; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; overflow-x: hidden; }
+ 
+-body { margin: 0; text-rendering: optimizeLegibility; }
++body { margin: 0; text-rendering: optimizeLegibility; overflow-x: hidden; }
+ 
+ img { border: 0; -ms-interpolation-mode: bicubic; display: block;}
+ 
