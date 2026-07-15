@@ -43,6 +43,12 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Carousel
 
 .gallery--carousel {
+	margin-left: auto;
+	margin-right: auto;
+
+	@include mq(tabletp) {
+		max-width: 35%;
+	}
 
 	.gallery__wrap {
 

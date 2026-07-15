@@ -1,0 +1,48 @@
+diff --git a/_data/illustration_carousel.yml b/_data/illustration_carousel.yml
+new file mode 100644
+index 0000000..2b47d0c
+--- /dev/null
++++ b/_data/illustration_carousel.yml
+@@ -0,0 +1,11 @@
++# Featured carousel pieces for the Illustration page.
++# Order here = order shown in the carousel.
++
++- image: /images/illustration/bird1.jpg
++  alt: 'Bird illustration 1'
++- image: /images/illustration/bird2.jpg
++  alt: 'Bird illustration 2'
++- image: /images/illustration/bird3.jpg
++  alt: 'Bird illustration 3'
++- image: /images/illustration/bird4.jpg
++  alt: 'Bird illustration 4'
+diff --git a/_sass/_includes/_gallery.scss b/_sass/_includes/_gallery.scss
+index cb933fd..6adfce1 100644
+--- a/_sass/_includes/_gallery.scss
++++ b/_sass/_includes/_gallery.scss
+@@ -43,6 +43,12 @@
+ // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Carousel
+ 
+ .gallery--carousel {
++	margin-left: auto;
++	margin-right: auto;
++
++	@include mq(tabletp) {
++		max-width: 50%;
++	}
+ 
+ 	.gallery__wrap {
+ 
+diff --git a/index.html b/index.html
+index 7316dc7..93e13f3 100644
+--- a/index.html
++++ b/index.html
+@@ -10,3 +10,9 @@ featured_image: /images/social.jpg
+ 	<img src="{{ piece.image | relative_url }}" alt="{{ piece.alt }}">
+ 	{% endfor %}
+ </div>
++
++<div class="gallery" data-columns="1">
++	{% for piece in site.data.illustration_carousel %}
++	<img src="{{ piece.image | relative_url }}" alt="{{ piece.alt }}">
++	{% endfor %}
++</div>

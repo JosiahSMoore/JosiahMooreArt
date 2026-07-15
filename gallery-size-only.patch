@@ -1,0 +1,17 @@
+diff --git a/_sass/_includes/_gallery.scss b/_sass/_includes/_gallery.scss
+index cb933fd..6adfce1 100644
+--- a/_sass/_includes/_gallery.scss
++++ b/_sass/_includes/_gallery.scss
+@@ -43,6 +43,12 @@
+ // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Carousel
+ 
+ .gallery--carousel {
++	margin-left: auto;
++	margin-right: auto;
++
++	@include mq(tabletp) {
++		max-width: 50%;
++	}
+ 
+ 	.gallery__wrap {
+ 
